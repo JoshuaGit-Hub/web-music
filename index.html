@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music web</title>
+</head>
+<body>
+    
+    <nav>
+        <img src="#" alt="Logo">
+        <a href="#"><img src="images/home.png" alt="Home" width="35px"></a>
+        <input type="text" placeholder="Buscar" aria-placeholder="Buscador">
+    </nav>
+
+    <aside id="right">
+        <div id="buscardor">
+            <button class="btn-category" id="Playlist"></button>
+            <button class="btn-category" id="Artist"></button>
+        </div>
+
+        <img src="images/lupa.png" alt="pesquisar" width="20px">
+
+        <div id="my-musics">
+            <audio id="audio">
+                <source src="musics/videoplayback.weba" type="audio/mp3"/>
+                seu navegador não suporta HTML5
+            </audio>
+            <button onclick="document.getElementById('audio').play()">Play</button>
+            <button onclick="document.getElementById('audio').pause()">Pause</button>
+            <input type="range" id="volume" min="0" max="1" step="0.01" onchange="document.getElementById('audio').volume = this.value">    
+        </div>
+    </aside>
+
+    <main>
+
+    </main>
+
+    <aside id="left">
+
+    </aside>
+
+
+
+</body>
+</html>
