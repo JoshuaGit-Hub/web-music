@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #383838;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    background-color: #282828;
+    height: auto;
+    min-height: 70px;
+    align-items: center;
+    padding: 0px 20px;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+nav #busca{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 290px;
+}
+
+#busca img{
+    filter: invert(1);
+}
+
+div #home-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+div #home-img:hover{
+    transform: scale(20px);
+    background-color: #444;
+    transition: .4s ease-in-out;
+}
+
+.input-style{
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 120px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.421);
+}
+
+.input-style:hover:hover{
+    transition: .3s ease-in-out;
+    background-color: #444;
+}
+
+.input-style:hover::placeholder{
+    color: #ccc;
+    padding-left: 5px;
+}
+
+.input-style:focus::placeholder{
+    color: #ccc;
+    padding-left: 5px;
+}
+
+.input-style:focus{
+    width: 100%;
+    transition: .4s ease-in-out;
+    outline: none;
+    caret-color: #fff;
+    background-color: #444;
+}
+
+div#main{
+    display: flex;    
+    height: auto;
+    min-height: 500px;
+    width: 100%;
+}
+
+aside{
+    background-color: #303030;
+    width: 40%;
+    padding: 15px;
+}
+
+aside#right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+
+#buscar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#buscar-left{
+    margin-left: 10px;
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+
+#buscar-left:focus{
+    width: 72%;
+}
+
+#lupa{
+    margin-left: 5px;
+    cursor: pointer;
+    padding: 10px;
+    width: 45px;
+    border-radius: 50%;
+    filter: invert(1);
+}
+
+#lupa:hover{
+    background-color: #292929;
+}
+
+aside#left{
+    width: 25%;
+}
+
+#buscador{
+    background-color: #282828;
+    width: 100%;
+    padding: 10px;
+}
+
+div#my-musics{
+    margin-left: 15px;
+}
+
+main{
+    background-color: #282828;
+    width: 50%;
+    height: auto;
+    min-height: 250px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-style{
+    border-radius: 5px;
+    padding: 3px 6px;
+    border: none;
+    background-color: #ccc;
+    margin-right: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.533);
+
+}
+
+.btn-style:hover{
+    background-color: #979797;
+}
+
+.btn-play{
+    background-color: rgb(1, 193, 1);
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
+
+.btn-play img{
+    width: 30px;
+}

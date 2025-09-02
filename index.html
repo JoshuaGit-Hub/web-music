@@ -3,44 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music web</title>
+    <title>Music Web</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <nav>
-        <img src="#" alt="Logo">
-        <a href="#"><img src="images/home.png" alt="Home" width="35px"></a>
-        <input type="text" placeholder="Buscar" aria-placeholder="Buscador">
+        <img src="images/logo.png" alt="Logo"> <!-- Substitua pelo caminho correto da imagem -->
+        <div id="busca">
+            <div id="home-img"><a href="#"><img src="images/home.png" alt="Home" width="30px"></a></div>
+            <input type="text" placeholder="Buscar" aria-placeholder="Buscador" class="input-style">
+        </div>
     </nav>
 
-    <aside id="right">
-        <div id="buscardor">
-            <button class="btn-category" id="Playlist"></button>
-            <button class="btn-category" id="Artist"></button>
-        </div>
+    <div id="main">
+        <aside id="right">
 
-        <img src="images/lupa.png" alt="pesquisar" width="20px">
+            <div id="buscador">
+                <button class="btn-style" id="Playlist">Playlist</button>
+                <button class="btn-style" id="Artist">Artista</button>
+            </div>
 
-        <div id="my-musics">
-            <audio id="audio">
-                <source src="musics/videoplayback.weba" type="audio/mp3"/>
-                seu navegador não suporta HTML5
-            </audio>
-            <button onclick="document.getElementById('audio').play()">Play</button>
-            <button onclick="document.getElementById('audio').pause()">Pause</button>
-            <input type="range" id="volume" min="0" max="1" step="0.01" onchange="document.getElementById('audio').volume = this.value">    
-        </div>
-    </aside>
+            <div id="buscar">
+                <img id="lupa" src="images/lupa.png" alt="Pesquisar" width="35px">
+                <input id="buscar-left" type="text" placeholder="buscar" class="input-style">
+            </div>
 
-    <main>
+            <div id="my-musics">
+                <audio id="audio1" class="audio musics-style">
+                    <source src="musics/videoplayback.weba" type="audio/mp3">
+                    Seu navegador não suporta HTML5
+                </audio>
 
-    </main>
+                <button class="btn-play btn-style" data-audio="audio1"><img src="images/play-icon.png" alt="play"></button>
+                <input type="range" id="volume1" min="0" max="1" step="0.01" onchange="document.getElementById('audio1').volume = this.value">
+            </div>
+        </aside>
 
-    <aside id="left">
+        <main>
+            <div id="main-musics">
+                <audio id="audio2" class="audio musics-style">
+                    <source src="musics/videoplayback.weba" type="audio/mp3">
+                    Seu navegador não suporta HTML5
+                </audio>
 
-    </aside>
+                <button class="btn-play btn-style" data-audio="audio2"><img src="images/play-icon.png" alt="play"></button>
+                <input type="range" id="volume2" min="0" max="1" step="0.01" onchange="document.getElementById('audio2').volume = this.value">
+            </div>
+        </main>
+        
+        <aside id="left">
+            <div id="tocando-now">
+                <img src="images/tocando.png" alt="Tocando"> 
 
+                <p id="name-music">Música Atual</p>
+            </div>
+        </aside>
+    </div>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
