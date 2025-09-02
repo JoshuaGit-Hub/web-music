@@ -157,6 +157,14 @@ main{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.player{
+    background-color: #181818;
+    height: 200px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .btn-style{
     border-radius: 5px;
     padding: 3px 6px;
@@ -176,6 +184,37 @@ main{
     justify-content: center;
     align-items: center;
     width: 40px;
+    outline: none;
+}
+
+.btn-volumen{
+    -webkit-appearance: none;
+    
+}
+
+.btn-volumen::-webkit-slider-runnable-track{
+    width: 100%;
+    background-color: beige;
+    border-radius: 9px;
+    -webkit-appearance: none;
+    border: 1px solid #fff;
+    height: 1px;
+}
+
+.btn-volumen::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #00a2ff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -8px;
+    border: 1px solid #e6e6e6;
+}
+
+.btn-play:hover{
+    background-color: rgb(0, 138, 0);
+    transition: .3s ease-in-out;
 }
 
 .btn-play img{

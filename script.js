@@ -1,3 +1,8 @@
+const pauseIcon = document.createElement('img'); 
+pauseIcon.src = 'images/pause-icon.png'; 
+
+const playIcon = document.createElement('img'); 
+playIcon.src = 'images/play-icon.png'; 
 
 const btnsPlay = document.getElementsByClassName('btn-play');
 const audios = document.getElementsByClassName('audio');
@@ -5,17 +10,7 @@ const audios = document.getElementsByClassName('audio');
 const lupa = document.getElementById('lupa');
 const inputBuscar = document.getElementById('buscar-left');
 
-const pauseIcon = document.createElement('img'); 
-img.src = 'images/pause-icon.png'; 
-img.alt = 'Descrição da imagem'; 
-img.style.width = '20px'; 
-img.style.height = '20px';
 
-const playIcon = document.createElement('img'); 
-img.src = 'images/play-icon.png'; 
-img.alt = 'Descrição da imagem'; 
-img.style.width = '20px'; 
-img.style.height = '20px';
 
 Array.from(btnsPlay).forEach((button, index) => {
     button.addEventListener('click', () => {
@@ -28,7 +23,7 @@ Array.from(btnsPlay).forEach((button, index) => {
         } else {
             audio.pause();
             button.textContent = '';
-            button.appendChild(playIcon.cloneNode(true));
+            button.appendChild(playIcon.cloneNode(true)); 
         } 
     });
 });
