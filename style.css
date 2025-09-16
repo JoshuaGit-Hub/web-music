@@ -22,7 +22,6 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
     position: relative;
-
 }
 
 nav #busca{
@@ -33,6 +32,10 @@ nav #busca{
     align-items: center;
     gap: 10px;
     width: 290px;
+}
+
+nav input{
+    transition: .4s ease-in-out;
 }
 
 #busca img{
@@ -60,9 +63,10 @@ div #home-img:hover{
     padding: 10px;
     width: 120px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.421);
+    color: white;
 }
 
-.input-style:hover:hover{
+.input-style:hover{
     transition: .3s ease-in-out;
     background-color: #444;
 }
@@ -113,12 +117,8 @@ aside#right{
 
 #buscar-left{
     margin-left: 10px;
-    opacity: 0;
     transition: .4s ease-in-out;
-}
-
-#buscar-left:focus{
-    width: 72%;
+    opacity: 0;
 }
 
 #lupa{
@@ -159,10 +159,37 @@ main{
 
 .player{
     background-color: #181818;
-    height: 200px;
     width: 100%;
     padding: 5px;
     border-radius: 5px;
+}
+
+.player h2{
+    display: inline;
+    font-size: 1.2em;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background: #1e90ff;
+    transition: width 0.1s linear;
+}
+
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 14px;
 }
 
 .btn-style{
@@ -189,7 +216,6 @@ main{
 
 .btn-volumen{
     -webkit-appearance: none;
-    
 }
 
 .btn-volumen::-webkit-slider-runnable-track{
@@ -205,11 +231,16 @@ main{
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    background: #00a2ff;
+    background: #e6e6e6;
     border-radius: 50%;
     cursor: pointer;
     margin-top: -8px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #000000;
+}
+
+.btn-volumen::-webkit-slider-thumb:active{
+    transition: transform .2s ease-in-out;
+    transform: scale(1.4);
 }
 
 .btn-play:hover{
